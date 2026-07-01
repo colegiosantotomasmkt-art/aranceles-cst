@@ -145,8 +145,14 @@ var ARANCELES = {
 };
 
 // % de descuento (rara vez cambian). Se aplican sobre el precio BONIFICADO.
-var DESCUENTO_HERMANO = { 1:0, 2:0.10, 3:0.15, 4:0.46 };
+// descPorPosicion[cantTotal][posicion] = % de descuento
 var DESCUENTO_MEDIA_BECA = 0.46;
+function descHermano(posicion, cantTotal){
+  if(cantTotal===1) return 0;           // hijo unico: sin descuento
+  if(posicion<=2) return 0.10;          // 1ro y 2do hermano: 10%
+  if(posicion===3) return 0.15;         // 3er hermano: 15%
+  return 0.46;                          // 4to hermano: 46%
+}
 
 /* ============  FIN DEL PANEL DE EDICION - no tocar lo de abajo  ============ */
 
@@ -160,10 +166,10 @@ var niveles = Object.keys(ARANCELES.preciosBonificado);
 
 function money(v){ if(v===null||v===undefined) return &quot;-&quot;; return &quot;$&quot;+v.toLocaleString(&quot;es-AR&quot;,{minimumFractionDigits:v%1===0?0:2,maximumFractionDigits:2}); }
 
-// Precio de un hijo segun su posicion (1=sin desc), nivel y periodo.
-function precioPosicion(nivel, posicion, periodoId){
+// Precio de un hijo segun su posicion y cantidad total de hermanos en el colegio.
+function precioPosicion(nivel, posicion, periodoId, cantTotal){
   var bonif = ARANCELES.preciosBonificado[nivel];
-  var conDesc = bonif * (1 - DESCUENTO_HERMANO[posicion]);
+  var conDesc = bonif * (1 - descHermano(posicion, cantTotal));
   if(periodoId === &quot;normal&quot;){
     var recargo = ARANCELES.preciosNormal[nivel] - bonif;
     conDesc += recargo;
@@ -235,8 +241,8 @@ function pintarTJ(i,nivel){
 function renderHijos(){
   var cant=parseInt(selCant.value,10); cont.innerHTML=&quot;&quot;;
   for(var i=1;i<=cant;i++){
-    var d=DESCUENTO_HERMANO[i]||0;
-    var ex=i===1?&quot;&quot;:' <span style=&quot;font-weight:400;color:#8a8194;font-size:.82rem;&quot;>(descuento '+Math.round(d*100)+'% sobre su nivel)</span>';
+    var descPos=descHermano(i,cant);
+    var ex=descPos===0?'':' <span style=&quot;font-weight:400;color:#8a8194;font-size:.82rem;&quot;>(descuento '+Math.round(descPos*100)+'% sobre su nivel)</span>';
     var w=document.createElement(&quot;div&quot;); w.className=&quot;hijo&quot;;
     w.innerHTML='<div class=&quot;th&quot;>Hijo '+ORD[i]+ex+'</div>'+
       '<div class=&quot;row&quot;>'+
@@ -267,7 +273,11 @@ function calcular(){
     var jor=cont.querySelector('.jor[data-i=&quot;'+i+'&quot;]').checked;
     var cuota,etq;
     if(beca){ cuota=precioMediaBeca(nivel,perId); etq=&quot;Hijo &quot;+ORD[i]+&quot; (&quot;+nivel+&quot;) - 1/2 beca&quot;; }
-    else { cuota=precioPosicion(nivel,i,perId); etq=&quot;Hijo &quot;+ORD[i]+&quot; (&quot;+nivel+&quot;)&quot;+(i>1?&quot; - &quot;+Math.round(DESCUENTO_HERMANO[i]*100)+&quot;% off&quot;:&quot;&quot;); }
+    else {
+      var desc=descHermano(i,cant);
+      cuota=precioPosicion(nivel,i,perId,cant);
+      etq=&quot;Hijo &quot;+ORD[i]+&quot; (&quot;+nivel+&quot;)&quot;+(desc>0?&quot; - &quot;+Math.round(desc*100)+&quot;% off&quot;:&quot;&quot;);
+    }
     total+=cuota; det.push(fila(etq,money(cuota)));
     if(jor){ var jk=jornadaCompatible(nivel); if(jk&amp;&amp;ARANCELES.jornadaExtendida[jk]!==undefined){ var vj=ARANCELES.jornadaExtendida[jk]; total+=vj; det.push(fila(&quot;Jornada Extendida&quot;,money(vj))); } }
     var ch=cont.querySelectorAll('.chktall[data-i=&quot;'+i+'&quot;]:checked');
