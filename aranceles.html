@@ -1,8 +1,8 @@
-<iframe id="cstArancelesFrame" srcdoc="<!DOCTYPE html>
-<html lang=&quot;es&quot;>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<meta charset=&quot;UTF-8&quot;>
-<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   *{box-sizing:border-box;}
   body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#2b2433;line-height:1.5;background:transparent;}
@@ -47,54 +47,54 @@
 </style>
 </head>
 <body>
-<div class=&quot;wrap&quot;>
+<div class="wrap">
 
-  <div class=&quot;header&quot;>
+  <div class="header">
     <h1>Aranceles Colegio Santo Tomás</h1>
-    <div class=&quot;tit&quot; id=&quot;htit&quot;></div>
-    <div class=&quot;vig&quot; id=&quot;hvig&quot;></div>
+    <div class="tit" id="htit"></div>
+    <div class="vig" id="hvig"></div>
   </div>
 
-  <div class=&quot;card&quot;>
-    <div class=&quot;ult&quot; id=&quot;ult&quot;></div>
+  <div class="card">
+    <div class="ult" id="ult"></div>
     <h2>Valores de la cuota</h2>
-    <div id=&quot;tablas&quot;></div>
-    <p class=&quot;nota&quot;>Los importes corresponden a los vigentes a la fecha y podrán sufrir variaciones según las resoluciones de las autoridades de la Provincia de Buenos Aires. &quot;2 hermanos&quot; es el valor por hijo cuando hay 2 alumnos de la familia en el colegio; &quot;3° hermano&quot; y &quot;4° hermano&quot; son los valores del tercer y cuarto hijo.</p>
+    <div id="tablas"></div>
+    <p class="nota">Los importes corresponden a los vigentes a la fecha y podrán sufrir variaciones según las resoluciones de las autoridades de la Provincia de Buenos Aires. "2 hermanos" es el valor por hijo cuando hay 2 alumnos de la familia en el colegio; "3° hermano" y "4° hermano" son los valores del tercer y cuarto hijo.</p>
   </div>
 
-  <div class=&quot;card&quot;>
+  <div class="card">
     <h2>Jornada Extendida</h2>
-    <div class=&quot;scroll&quot; id=&quot;tjor&quot;></div>
+    <div class="scroll" id="tjor"></div>
   </div>
 
-  <div class=&quot;card&quot;>
+  <div class="card">
     <h2>Talleres</h2>
-    <div class=&quot;cols&quot;>
-      <div class=&quot;col&quot;><h3>Nivel Primario</h3><div class=&quot;scroll&quot; id=&quot;ttprim&quot;></div></div>
-      <div class=&quot;col&quot;><h3>Nivel Secundario</h3><div class=&quot;scroll&quot; id=&quot;ttsec&quot;></div></div>
+    <div class="cols">
+      <div class="col"><h3>Nivel Primario</h3><div class="scroll" id="ttprim"></div></div>
+      <div class="col"><h3>Nivel Secundario</h3><div class="scroll" id="ttsec"></div></div>
     </div>
   </div>
 
-  <div class=&quot;card&quot;>
+  <div class="card">
     <h2>Calculá tu cuota</h2>
-    <p class=&quot;nota&quot; style=&quot;margin-top:0;&quot;>Cargá un alumno por cada hijo de la familia en el colegio. El descuento por hermanos se aplica automáticamente según el orden (1° sin descuento, luego 10%, 15% y 46%), cada uno sobre el precio de <b>su propio</b> nivel.</p>
-    <div class=&quot;row&quot;>
-      <div class=&quot;fld&quot;><label class=&quot;f&quot;>¿Cuántos hijos en el colegio?</label>
-        <select id=&quot;cant&quot;><option value=&quot;1&quot;>1 alumno</option><option value=&quot;2&quot;>2 hermanos</option><option value=&quot;3&quot;>3 hermanos</option><option value=&quot;4&quot;>4 hermanos</option></select></div>
-      <div class=&quot;fld&quot;><label class=&quot;f&quot;>Fecha de pago</label><select id=&quot;periodo&quot;></select></div>
+    <p class="nota" style="margin-top:0;">Cargá un alumno por cada hijo de la familia en el colegio. El descuento por hermanos se aplica automáticamente: cuando hay 2 o más hijos, el 1° y 2° pagan con 10% off, el 3° con 15% off y el 4° con 46% off, cada uno sobre el precio de <b>su propio</b> nivel.</p>
+    <div class="row">
+      <div class="fld"><label class="f">¿Cuántos hijos en el colegio?</label>
+        <select id="cant"><option value="1">1 alumno</option><option value="2">2 hermanos</option><option value="3">3 hermanos</option><option value="4">4 hermanos</option></select></div>
+      <div class="fld"><label class="f">Fecha de pago</label><select id="periodo"></select></div>
     </div>
-    <div id=&quot;hijos&quot;></div>
-    <div class=&quot;res&quot;>
-      <div class=&quot;venc&quot; id=&quot;venc&quot;></div>
+    <div id="hijos"></div>
+    <div class="res">
+      <div class="venc" id="venc"></div>
       <div>Total familiar a abonar</div>
-      <div class=&quot;monto&quot; id=&quot;monto&quot;>$0</div>
-      <div class=&quot;det&quot; id=&quot;det&quot;></div>
+      <div class="monto" id="monto">$0</div>
+      <div class="det" id="det"></div>
     </div>
   </div>
 
-  <div class=&quot;pago&quot;>
-    <p style=&quot;margin:0 0 10px;&quot;><b>Datos para transferencia o depósito:</b><br>Cuenta n° 1143/1 — CBU: 0140150501504900114317<br>Emilia Tomé e Hijos SRL — CUIT: 30-71572009-0<br>También se puede abonar con tarjeta de crédito/débito.</p>
-    <p style=&quot;margin:0;&quot;>Enviá el comprobante con nombre y curso del alumno a <b>tesoreria@colegiosantotomas.com.ar</b></p>
+  <div class="pago">
+    <p style="margin:0 0 10px;"><b>Datos para transferencia o depósito:</b><br>Cuenta n° 1143/1 — CBU: 0140150501504900114317<br>Emilia Tomé e Hijos SRL — CUIT: 30-71572009-0<br>También se puede abonar con tarjeta de crédito/débito.</p>
+    <p style="margin:0;">Enviá el comprobante con nombre y curso del alumno a <b>tesoreria@colegiosantotomas.com.ar</b></p>
   </div>
 
 </div>
@@ -104,202 +104,281 @@
    ============  PANEL DE EDICION - TOCA SOLO ESTO CADA MES  ===========
    =====================================================================
 
-   PASO 1 - Titulo, vigencia y fecha de actualizacion (3 lineas de texto).
+   PASO 1 - Titulo, vigencia y fecha de actualizacion (3 lineas).
 
-   PASO 2 - Cargá SOLO el precio de &quot;1 alumno&quot; de cada nivel, en cada
-            periodo (bonificado y normal). Son 6 numeros por periodo.
+   PASO 2 - Precio de "1 alumno" bonificado y normal para cada nivel.
             El resto (2do, 3er, 4to hermano y 1/2 beca) se calcula solo.
 
-   COMO FUNCIONA EL CALCULO (logica del colegio):
-   - El descuento de hermano/beca se aplica SIEMPRE sobre el precio
-     BONIFICADO de &quot;1 alumno&quot;.
-   - En el periodo NORMAL, ademas, se suma el recargo del periodo
-     (diferencia entre el normal y el bonificado de &quot;1 alumno&quot;).
-   Asi coincide exacto con la planilla de Tesoreria.
+   LOGICA DEL CALCULO:
+   - Descuentos SIEMPRE sobre el precio BONIFICADO de "1 alumno".
+   - Periodo NORMAL = precio con descuento + recargo (normal - bonificado).
+   - 2 o mas hermanos: 1ro y 2do pagan 10% off, 3ro 15% off, 4to 46% off.
 
    ===================================================================== */
 
-var ULTIMA_ACTUALIZACION = &quot;29/05/2026&quot;;
+var ULTIMA_ACTUALIZACION = "01/07/2026";
 
 var ARANCELES = {
-  tituloCuota: &quot;Cuota 4 - Junio 2026&quot;,
-  vigencia: &quot;Vigente del 01/06/2026 al 30/06/2026&quot;,
+  tituloCuota: "Cuota 5 — Julio 2026",
+  vigencia: "Vigente del 01/07/2026 al 31/07/2026",
 
-  // Precio de &quot;1 alumno&quot; en cada periodo. (bonif = base de los descuentos)
   preciosBonificado: {
-    &quot;Sala 2-3 años&quot;:106030, &quot;Sala 4 años&quot;:120463, &quot;Sala 5 años&quot;:135596,
-    &quot;Primaria 1 a 6&quot;:157528, &quot;Secundaria 1 a 3&quot;:178132, &quot;Secundaria 4 a 6&quot;:180132
+    "Sala 2-3 años":  106030,
+    "Sala 4 años":    120463,
+    "Sala 5 años":    135596,
+    "Primaria 1° a 6°":  157528,
+    "Secundaria 1° a 3°": 178132,
+    "Secundaria 4° a 6°": 180132
   },
   preciosNormal: {
-    &quot;Sala 2-3 años&quot;:119872, &quot;Sala 4 años&quot;:135168, &quot;Sala 5 años&quot;:150564,
-    &quot;Primaria 1 a 6&quot;:162760, &quot;Secundaria 1 a 3&quot;:185940, &quot;Secundaria 4 a 6&quot;:185940
+    "Sala 2-3 años":  119872,
+    "Sala 4 años":    135168,
+    "Sala 5 años":    150564,
+    "Primaria 1° a 6°":  162760,
+    "Secundaria 1° a 3°": 185940,
+    "Secundaria 4° a 6°": 185940
   },
 
-  etiquetaBonificado: &quot;Pago bonificado: 01/06/2026 al 06/06/2026&quot;,
-  etiquetaNormal:     &quot;Pago normal: 07/06/2026 al 30/06/2026&quot;,
+  etiquetaBonificado: "Valor bonificado: abonando del 01/07/2026 al 06/07/2026",
+  etiquetaNormal:     "Abonando del 07/07/2026 al 31/07/2026",
 
-  jornadaExtendida:{ &quot;Sala 2-3 años&quot;:59936, &quot;Sala 4 años&quot;:67584, &quot;Sala 5 años&quot;:75282, &quot;Primaria&quot;:81380 },
+  jornadaExtendida: {
+    "Sala 2-3 años": 59936,
+    "Sala 4 años":   67584,
+    "Sala 5 años":   75282,
+    "Primaria":      81380
+  },
 
-  talleresPrimaria:{ &quot;Natacion&quot;:40000, &quot;Robotica&quot;:30000, &quot;Teatro&quot;:25000, &quot;Arte y Ceramica&quot;:25000 },
-  talleresSecundaria:{ &quot;Musica / Pintura&quot;:20000 }
+  talleresPrimaria:   { "Natación": 40000, "Robótica": 30000, "Teatro": 25000, "Arte y Cerámica": 25000 },
+  talleresSecundaria: { "Música / Pintura": 20000 }
 };
 
-// % de descuento (rara vez cambian). Se aplican sobre el precio BONIFICADO.
-// descPorPosicion[cantTotal][posicion] = % de descuento
+/* ============  FIN DEL PANEL DE EDICION  ============ */
+
 var DESCUENTO_MEDIA_BECA = 0.46;
-function descHermano(posicion, cantTotal){
-  if(cantTotal===1) return 0;           // hijo unico: sin descuento
-  if(posicion<=2) return 0.10;          // 1ro y 2do hermano: 10%
-  if(posicion===3) return 0.15;         // 3er hermano: 15%
-  return 0.46;                          // 4to hermano: 46%
+
+// Descuento según posición y cantidad total de hermanos en el colegio
+function descHermano(posicion, cantTotal) {
+  if (cantTotal === 1) return 0;     // hijo único: sin descuento
+  if (posicion <= 2)  return 0.10;  // 1ro y 2do: 10% off
+  if (posicion === 3) return 0.15;  // 3ro: 15% off
+  return 0.46;                       // 4to: 46% off
 }
 
-/* ============  FIN DEL PANEL DE EDICION - no tocar lo de abajo  ============ */
-
-// Construyo internamente la estructura de periodos a partir de los precios cargados.
-var ARANCELES_PERIODOS = [
-  { id:&quot;bonificado&quot;, etiqueta:ARANCELES.etiquetaBonificado, recargo:false },
-  { id:&quot;normal&quot;,     etiqueta:ARANCELES.etiquetaNormal,     recargo:true  }
+var PERIODOS = [
+  { id: "bonificado", etiqueta: ARANCELES.etiquetaBonificado },
+  { id: "normal",     etiqueta: ARANCELES.etiquetaNormal }
 ];
 
 var niveles = Object.keys(ARANCELES.preciosBonificado);
 
-function money(v){ if(v===null||v===undefined) return &quot;-&quot;; return &quot;$&quot;+v.toLocaleString(&quot;es-AR&quot;,{minimumFractionDigits:v%1===0?0:2,maximumFractionDigits:2}); }
-
-// Precio de un hijo segun su posicion y cantidad total de hermanos en el colegio.
-function precioPosicion(nivel, posicion, periodoId, cantTotal){
-  var bonif = ARANCELES.preciosBonificado[nivel];
-  var conDesc = bonif * (1 - descHermano(posicion, cantTotal));
-  if(periodoId === &quot;normal&quot;){
-    var recargo = ARANCELES.preciosNormal[nivel] - bonif;
-    conDesc += recargo;
-  }
-  return +conDesc.toFixed(2);
-}
-function precioMediaBeca(nivel, periodoId){
-  var bonif = ARANCELES.preciosBonificado[nivel];
-  var conDesc = bonif * (1 - DESCUENTO_MEDIA_BECA);
-  if(periodoId === &quot;normal&quot;){ conDesc += (ARANCELES.preciosNormal[nivel] - bonif); }
-  return +conDesc.toFixed(2);
+function money(v) {
+  if (v === null || v === undefined) return "-";
+  return "$" + v.toLocaleString("es-AR", { minimumFractionDigits: v % 1 === 0 ? 0 : 2, maximumFractionDigits: 2 });
 }
 
-function $(id){ return document.getElementById(id); }
-var ORD = {1:&quot;1&quot;,2:&quot;2&quot;,3:&quot;3&quot;,4:&quot;4&quot;};
+function precioPosicion(nivel, posicion, periodoId, cantTotal) {
+  var bonif = ARANCELES.preciosBonificado[nivel];
+  var precio = bonif * (1 - descHermano(posicion, cantTotal));
+  if (periodoId === "normal") precio += ARANCELES.preciosNormal[nivel] - bonif;
+  return +precio.toFixed(2);
+}
 
-$(&quot;htit&quot;).textContent = ARANCELES.tituloCuota;
-$(&quot;hvig&quot;).textContent = ARANCELES.vigencia;
-$(&quot;ult&quot;).textContent = &quot;Ultima actualizacion de valores: &quot;+ULTIMA_ACTUALIZACION;
+function precioMediaBeca(nivel, periodoId) {
+  var bonif = ARANCELES.preciosBonificado[nivel];
+  var precio = bonif * (1 - DESCUENTO_MEDIA_BECA);
+  if (periodoId === "normal") precio += ARANCELES.preciosNormal[nivel] - bonif;
+  return +precio.toFixed(2);
+}
 
-// Tablas de valores por periodo
-(function(){
-  var h=&quot;&quot;;
-  ARANCELES_PERIODOS.forEach(function(p){
-    h+='<div class=&quot;scroll&quot;><span class=&quot;tag&quot;>'+p.etiqueta+'</span><table><thead><tr><th class=&quot;l&quot;>Concepto</th>';
-    niveles.forEach(function(n){ h+='<th>'+n+'</th>'; });
-    h+='</tr></thead><tbody>';
-    var filas=[
-      {l:&quot;1 alumno&quot;, f:function(n){return precioPosicion(n,1,p.id);}},
-      {l:&quot;2 hermanos (c/u)&quot;, f:function(n){return precioPosicion(n,2,p.id);}},
-      {l:&quot;3 hermano&quot;, f:function(n){return precioPosicion(n,3,p.id);}},
-      {l:&quot;4 hermano&quot;, f:function(n){return precioPosicion(n,4,p.id);}},
-      {l:&quot;1/2 beca&quot;, f:function(n){return precioMediaBeca(n,p.id);}}
+function $(id) { return document.getElementById(id); }
+var ORD = { 1: "1°", 2: "2°", 3: "3°", 4: "4°" };
+
+$("htit").textContent = ARANCELES.tituloCuota;
+$("hvig").textContent = ARANCELES.vigencia;
+$("ult").textContent  = "Última actualización de valores: " + ULTIMA_ACTUALIZACION;
+
+// Tablas de valores
+(function () {
+  var h = "";
+  PERIODOS.forEach(function (p) {
+    h += '<div class="scroll"><span class="tag">' + p.etiqueta + '</span>';
+    h += '<table><thead><tr><th class="l">Concepto</th>';
+    niveles.forEach(function (n) { h += '<th>' + n + '</th>'; });
+    h += '</tr></thead><tbody>';
+    var filas = [
+      { l: "1 alumno",          f: function (n) { return precioPosicion(n, 1, p.id, 1); } },
+      { l: "2 hermanos (c/u)",  f: function (n) { return precioPosicion(n, 2, p.id, 2); } },
+      { l: "3° hermano",        f: function (n) { return precioPosicion(n, 3, p.id, 3); } },
+      { l: "4° hermano",        f: function (n) { return precioPosicion(n, 4, p.id, 4); } },
+      { l: "1/2 beca",          f: function (n) { return precioMediaBeca(n, p.id); } }
     ];
-    filas.forEach(function(fi,idx){
-      h+='<tr'+(idx%2?' class=&quot;alt&quot;':'')+'><td class=&quot;l&quot;>'+fi.l+'</td>';
-      niveles.forEach(function(n){ h+='<td>'+money(fi.f(n))+'</td>'; });
-      h+='</tr>';
+    filas.forEach(function (fi, idx) {
+      h += '<tr' + (idx % 2 ? ' class="alt"' : '') + '><td class="l">' + fi.l + '</td>';
+      niveles.forEach(function (n) { h += '<td>' + money(fi.f(n)) + '</td>'; });
+      h += '</tr>';
     });
-    h+='</tbody></table></div>';
+    h += '</tbody></table></div>';
   });
-  $(&quot;tablas&quot;).innerHTML=h;
+  $("tablas").innerHTML = h;
 })();
 
-function tablaSimple(id,data){
-  var k=Object.keys(data),h='<table><thead><tr>';
-  k.forEach(function(x){h+='<th>'+x+'</th>';}); h+='</tr></thead><tbody><tr>';
-  k.forEach(function(x){h+='<td>'+money(data[x])+'</td>';}); h+='</tr></tbody></table>';
-  $(id).innerHTML=h;
+function tablaSimple(id, data) {
+  var k = Object.keys(data), h = '<table><thead><tr>';
+  k.forEach(function (x) { h += '<th>' + x + '</th>'; });
+  h += '</tr></thead><tbody><tr>';
+  k.forEach(function (x) { h += '<td>' + money(data[x]) + '</td>'; });
+  h += '</tr></tbody></table>';
+  $(id).innerHTML = h;
 }
-tablaSimple(&quot;tjor&quot;,ARANCELES.jornadaExtendida);
-tablaSimple(&quot;ttprim&quot;,ARANCELES.talleresPrimaria);
-tablaSimple(&quot;ttsec&quot;,ARANCELES.talleresSecundaria);
+tablaSimple("tjor",   ARANCELES.jornadaExtendida);
+tablaSimple("ttprim", ARANCELES.talleresPrimaria);
+tablaSimple("ttsec",  ARANCELES.talleresSecundaria);
 
-var selCant=$(&quot;cant&quot;), selPer=$(&quot;periodo&quot;), cont=$(&quot;hijos&quot;);
-ARANCELES_PERIODOS.forEach(function(p){ var o=document.createElement(&quot;option&quot;);o.value=p.id;o.textContent=p.etiqueta;selPer.appendChild(o); });
+// Calculadora
+var selCant = $("cant"), selPer = $("periodo"), cont = $("hijos");
 
-function talleresDeNivel(n){ if(n.indexOf(&quot;Sala&quot;)===0)return{}; if(n.indexOf(&quot;Primaria&quot;)===0)return ARANCELES.talleresPrimaria; if(n.indexOf(&quot;Secundaria&quot;)===0)return ARANCELES.talleresSecundaria; return{}; }
-function jornadaCompatible(n){ if(n.indexOf(&quot;Sala&quot;)===0)return n; if(n.indexOf(&quot;Primaria&quot;)===0)return &quot;Primaria&quot;; return null; }
+PERIODOS.forEach(function (p) {
+  var o = document.createElement("option");
+  o.value = p.id; o.textContent = p.etiqueta;
+  selPer.appendChild(o);
+});
 
-function pintarTJ(i,nivel){
-  var ct=cont.querySelector('.tall[data-i=&quot;'+i+'&quot;]'), fld=ct.parentNode, t=talleresDeNivel(nivel), k=Object.keys(t);
-  if(k.length===0){ fld.style.display=&quot;none&quot;; ct.innerHTML=&quot;&quot;; }
-  else { fld.style.display=&quot;&quot;; ct.innerHTML=k.map(function(n){return '<label><input type=&quot;checkbox&quot; class=&quot;chktall&quot; data-i=&quot;'+i+'&quot; value=&quot;'+n+'&quot;> '+n+' ('+money(t[n])+')</label>';}).join(&quot;&quot;); }
-  var fj=cont.querySelector('.jorfld[data-i=&quot;'+i+'&quot;]'), cj=fj.querySelector(&quot;.jor&quot;);
-  if(jornadaCompatible(nivel)){ fj.style.display=&quot;&quot;; } else { fj.style.display=&quot;none&quot;; cj.checked=false; }
+function talleresDeNivel(n) {
+  if (n.indexOf("Sala") === 0)       return {};
+  if (n.indexOf("Primaria") === 0)   return ARANCELES.talleresPrimaria;
+  if (n.indexOf("Secundaria") === 0) return ARANCELES.talleresSecundaria;
+  return {};
+}
+function jornadaKey(n) {
+  if (n.indexOf("Sala") === 0)     return n;
+  if (n.indexOf("Primaria") === 0) return "Primaria";
+  return null;
 }
 
-function renderHijos(){
-  var cant=parseInt(selCant.value,10); cont.innerHTML=&quot;&quot;;
-  for(var i=1;i<=cant;i++){
-    var descPos=descHermano(i,cant);
-    var ex=descPos===0?'':' <span style=&quot;font-weight:400;color:#8a8194;font-size:.82rem;&quot;>(descuento '+Math.round(descPos*100)+'% sobre su nivel)</span>';
-    var w=document.createElement(&quot;div&quot;); w.className=&quot;hijo&quot;;
-    w.innerHTML='<div class=&quot;th&quot;>Hijo '+ORD[i]+ex+'</div>'+
-      '<div class=&quot;row&quot;>'+
-        '<div class=&quot;fld&quot;><label class=&quot;f&quot;>Nivel / curso</label><select class=&quot;nivel&quot; data-i=&quot;'+i+'&quot;>'+niveles.map(function(n){return '<option value=&quot;'+n+'&quot;>'+n+'</option>';}).join(&quot;&quot;)+'</select></div>'+
-        '<div class=&quot;fld&quot;><label class=&quot;f&quot;>Beneficio</label><select class=&quot;beca&quot; data-i=&quot;'+i+'&quot;><option value=&quot;no&quot;>Sin beneficio</option><option value=&quot;si&quot;>1/2 beca</option></select></div>'+
-        '<div class=&quot;fld jorfld&quot; data-i=&quot;'+i+'&quot; style=&quot;display:flex;align-items:flex-end;&quot;><label class=&quot;chkjor&quot;><input type=&quot;checkbox&quot; class=&quot;jor&quot; data-i=&quot;'+i+'&quot;> Jornada Extendida</label></div>'+
-      '</div>'+
-      '<div><label class=&quot;f&quot;>Talleres (opcional)</label><div class=&quot;tall&quot; data-i=&quot;'+i+'&quot;></div></div>';
-    cont.appendChild(w);
-    pintarTJ(i,niveles[0]);
+function pintarExtras(i, nivel) {
+  // Talleres
+  var ct = cont.querySelector('.tall[data-i="' + i + '"]');
+  var fldTall = ct.parentNode;
+  var tall = talleresDeNivel(nivel);
+  var keys = Object.keys(tall);
+  if (keys.length === 0) {
+    fldTall.style.display = "none"; ct.innerHTML = "";
+  } else {
+    fldTall.style.display = "";
+    ct.innerHTML = keys.map(function (n) {
+      return '<label><input type="checkbox" class="chktall" data-i="' + i + '" value="' + n + '"> ' + n + ' (' + money(tall[n]) + ')</label>';
+    }).join("");
   }
-  var ns=cont.querySelectorAll(&quot;.nivel&quot;);
-  for(var k=0;k<ns.length;k++){ ns[k].addEventListener(&quot;change&quot;,function(e){ pintarTJ(e.target.getAttribute(&quot;data-i&quot;),e.target.value); calcular(); }); }
+  // Jornada extendida
+  var fj = cont.querySelector('.jorfld[data-i="' + i + '"]');
+  var cj = fj.querySelector(".jor");
+  if (jornadaKey(nivel)) { fj.style.display = ""; }
+  else { fj.style.display = "none"; cj.checked = false; }
+}
+
+function renderHijos() {
+  var cant = parseInt(selCant.value, 10);
+  cont.innerHTML = "";
+  for (var i = 1; i <= cant; i++) {
+    var d = descHermano(i, cant);
+    var badge = d > 0 ? ' <span style="font-weight:400;color:#8a8194;font-size:.82rem;">(' + Math.round(d * 100) + '% off)</span>' : '';
+    var w = document.createElement("div");
+    w.className = "hijo";
+    w.innerHTML =
+      '<div class="th">Hijo ' + ORD[i] + badge + '</div>' +
+      '<div class="row">' +
+        '<div class="fld"><label class="f">Nivel / curso</label>' +
+          '<select class="nivel" data-i="' + i + '">' +
+            niveles.map(function (n) { return '<option value="' + n + '">' + n + '</option>'; }).join("") +
+          '</select></div>' +
+        '<div class="fld"><label class="f">Beneficio</label>' +
+          '<select class="beca" data-i="' + i + '"><option value="no">Sin beneficio</option><option value="si">1/2 beca</option></select></div>' +
+        '<div class="fld jorfld" data-i="' + i + '" style="display:flex;align-items:flex-end;">' +
+          '<label class="chkjor"><input type="checkbox" class="jor" data-i="' + i + '"> Jornada Extendida</label></div>' +
+      '</div>' +
+      '<div><label class="f">Talleres (opcional)</label><div class="tall" data-i="' + i + '"></div></div>';
+    cont.appendChild(w);
+    pintarExtras(i, niveles[0]);
+  }
+  cont.querySelectorAll(".nivel").forEach(function (sel) {
+    sel.addEventListener("change", function (e) {
+      pintarExtras(e.target.getAttribute("data-i"), e.target.value);
+      calcular();
+    });
+  });
   calcular();
 }
-cont.addEventListener(&quot;change&quot;,function(e){ if(!e.target.classList.contains(&quot;nivel&quot;)) calcular(); });
 
-function fila(l,v){ return '<div><span>'+l+'</span><span>'+v+'</span></div>'; }
+cont.addEventListener("change", function (e) {
+  if (!e.target.classList.contains("nivel")) calcular();
+});
 
-function calcular(){
-  var cant=parseInt(selCant.value,10);
+function fila(l, v) { return '<div><span>' + l + '</span><span>' + v + '</span></div>'; }
+
+function calcular() {
+  var cant  = parseInt(selCant.value, 10);
   var perId = selPer.value;
-  var per = ARANCELES_PERIODOS.filter(function(p){return p.id===perId;})[0];
-  var total=0,det=[];
-  for(var i=1;i<=cant;i++){
-    var nivel=cont.querySelector('.nivel[data-i=&quot;'+i+'&quot;]').value;
-    var beca=cont.querySelector('.beca[data-i=&quot;'+i+'&quot;]').value===&quot;si&quot;;
-    var jor=cont.querySelector('.jor[data-i=&quot;'+i+'&quot;]').checked;
-    var cuota,etq;
-    if(beca){ cuota=precioMediaBeca(nivel,perId); etq=&quot;Hijo &quot;+ORD[i]+&quot; (&quot;+nivel+&quot;) - 1/2 beca&quot;; }
-    else {
-      var desc=descHermano(i,cant);
-      cuota=precioPosicion(nivel,i,perId,cant);
-      etq=&quot;Hijo &quot;+ORD[i]+&quot; (&quot;+nivel+&quot;)&quot;+(desc>0?&quot; - &quot;+Math.round(desc*100)+&quot;% off&quot;:&quot;&quot;);
+  var per   = PERIODOS.filter(function (p) { return p.id === perId; })[0];
+  var total = 0, det = [];
+
+  for (var i = 1; i <= cant; i++) {
+    var nivel = cont.querySelector('.nivel[data-i="' + i + '"]').value;
+    var beca  = cont.querySelector('.beca[data-i="' + i + '"]').value === "si";
+    var jor   = cont.querySelector('.jor[data-i="' + i + '"]').checked;
+    var cuota, etq;
+
+    if (beca) {
+      cuota = precioMediaBeca(nivel, perId);
+      etq   = "Hijo " + ORD[i] + " (" + nivel + ") — 1/2 beca";
+    } else {
+      var d = descHermano(i, cant);
+      cuota = precioPosicion(nivel, i, perId, cant);
+      etq   = "Hijo " + ORD[i] + " (" + nivel + ")" + (d > 0 ? " — " + Math.round(d * 100) + "% off" : "");
     }
-    total+=cuota; det.push(fila(etq,money(cuota)));
-    if(jor){ var jk=jornadaCompatible(nivel); if(jk&amp;&amp;ARANCELES.jornadaExtendida[jk]!==undefined){ var vj=ARANCELES.jornadaExtendida[jk]; total+=vj; det.push(fila(&quot;Jornada Extendida&quot;,money(vj))); } }
-    var ch=cont.querySelectorAll('.chktall[data-i=&quot;'+i+'&quot;]:checked');
-    for(var c=0;c<ch.length;c++){ var t=talleresDeNivel(nivel),v=t[ch[c].value]; total+=v; det.push(fila(&quot;Taller: &quot;+ch[c].value,money(v))); }
+    total += cuota;
+    det.push(fila(etq, money(cuota)));
+
+    if (jor) {
+      var jk = jornadaKey(nivel);
+      if (jk && ARANCELES.jornadaExtendida[jk] !== undefined) {
+        var vj = ARANCELES.jornadaExtendida[jk];
+        total += vj;
+        det.push(fila("↳ Jornada Extendida", money(vj)));
+      }
+    }
+
+    var checks = cont.querySelectorAll('.chktall[data-i="' + i + '"]:checked');
+    checks.forEach(function (chk) {
+      var tall = talleresDeNivel(nivel);
+      var v = tall[chk.value];
+      total += v;
+      det.push(fila("↳ Taller: " + chk.value, money(v)));
+    });
   }
-  $(&quot;monto&quot;).textContent=money(total);
-  $(&quot;det&quot;).innerHTML=det.join(&quot;&quot;);
-  $(&quot;venc&quot;).textContent=per.etiqueta;
+
+  $("monto").textContent   = money(total);
+  $("det").innerHTML       = det.join("");
+  $("venc").textContent    = per.etiqueta;
 }
-selCant.addEventListener(&quot;change&quot;,renderHijos);
-selPer.addEventListener(&quot;change&quot;,calcular);
+
+selCant.addEventListener("change", renderHijos);
+selPer.addEventListener("change", calcular);
 renderHijos();
 </script>
+
 <script>
-(function(){
-  function reportar(){ var h = document.body.scrollHeight; parent.postMessage({cstAranceles:true, alto:h}, &quot;*&quot;); }
-  window.addEventListener(&quot;load&quot;, reportar);
-  var obs = new MutationObserver(reportar);
-  obs.observe(document.body, {childList:true, subtree:true, attributes:true});
-  document.addEventListener(&quot;change&quot;, function(){ setTimeout(reportar, 30); });
-  setInterval(reportar, 800);
+// Auto-resize: avisa al padre (iframe en la web) cuál es la altura real del contenido
+(function () {
+  function reportar() {
+    parent.postMessage({ cstAranceles: true, alto: document.body.scrollHeight }, "*");
+  }
+  window.addEventListener("load", reportar);
+  new MutationObserver(reportar).observe(document.body, { childList: true, subtree: true, attributes: true });
+  document.addEventListener("change", function () { setTimeout(reportar, 50); });
+  setInterval(reportar, 1000);
 })();
 </script>
+
 </body>
-</html>" style="width:100%;height:1700px;border:0;overflow:hidden;" loading="lazy"></iframe><script>window.addEventListener("message",function(e){if(e.data&&e.data.cstAranceles&&e.data.alto){var f=document.getElementById("cstArancelesFrame");if(f){f.style.height=(e.data.alto+30)+"px";}}});</script>
+</html>
