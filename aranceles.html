@@ -119,29 +119,28 @@
 
    ===================================================================== */
 
-var ULTIMA_ACTUALIZACION = &quot;29/05/2026&quot;;
+var ULTIMA_ACTUALIZACION = "01/07/2026";
 
 var ARANCELES = {
-  tituloCuota: &quot;Cuota 4 - Junio 2026&quot;,
-  vigencia: &quot;Vigente del 01/06/2026 al 30/06/2026&quot;,
+  tituloCuota: "Cuota 5 - Julio 2026",
+  vigencia: "Vigente del 01/07/2026 al 31/07/2026",
 
-  // Precio de &quot;1 alumno&quot; en cada periodo. (bonif = base de los descuentos)
   preciosBonificado: {
-    &quot;Sala 2-3 años&quot;:106030, &quot;Sala 4 años&quot;:120463, &quot;Sala 5 años&quot;:135596,
-    &quot;Primaria 1 a 6&quot;:157528, &quot;Secundaria 1 a 3&quot;:178132, &quot;Secundaria 4 a 6&quot;:180132
+    "Sala 2-3 años":106030, "Sala 4 años":120463, "Sala 5 años":135596,
+    "Primaria 1 a 6":157528, "Secundaria 1 a 3":178132, "Secundaria 4 a 6":180132
   },
   preciosNormal: {
-    &quot;Sala 2-3 años&quot;:119872, &quot;Sala 4 años&quot;:135168, &quot;Sala 5 años&quot;:150564,
-    &quot;Primaria 1 a 6&quot;:162760, &quot;Secundaria 1 a 3&quot;:185940, &quot;Secundaria 4 a 6&quot;:185940
+    "Sala 2-3 años":119872, "Sala 4 años":135168, "Sala 5 años":150564,
+    "Primaria 1 a 6":162760, "Secundaria 1 a 3":185940, "Secundaria 4 a 6":185940
   },
 
-  etiquetaBonificado: &quot;Pago bonificado: 01/06/2026 al 06/06/2026&quot;,
-  etiquetaNormal:     &quot;Pago normal: 07/06/2026 al 30/06/2026&quot;,
+  etiquetaBonificado: "Valor bonificado: abonando del 01/07/2026 al 06/07/2026",
+  etiquetaNormal: "Abonando del 07/07/2026 al 31/07/2026",
 
-  jornadaExtendida:{ &quot;Sala 2-3 años&quot;:59936, &quot;Sala 4 años&quot;:67584, &quot;Sala 5 años&quot;:75282, &quot;Primaria&quot;:81380 },
+  jornadaExtendida:{ "Sala 2-3 años":59936, "Sala 4 años":67584, "Sala 5 años":75282, "Primaria":81380 },
 
-  talleresPrimaria:{ &quot;Natacion&quot;:40000, &quot;Robotica&quot;:30000, &quot;Teatro&quot;:25000, &quot;Arte y Ceramica&quot;:25000 },
-  talleresSecundaria:{ &quot;Musica / Pintura&quot;:20000 }
+  talleresPrimaria:{ "Natacion":40000, "Robotica":30000, "Teatro":25000, "Arte y Ceramica":25000 },
+  talleresSecundaria:{ "Musica / Pintura":20000 }
 };
 
 // % de descuento (rara vez cambian). Se aplican sobre el precio BONIFICADO.
@@ -198,12 +197,12 @@ $(&quot;ult&quot;).textContent = &quot;Ultima actualizacion de valores: &quot;+U
     niveles.forEach(function(n){ h+='<th>'+n+'</th>'; });
     h+='</tr></thead><tbody>';
     var filas=[
-      {l:&quot;1 alumno&quot;, f:function(n){return precioPosicion(n,1,p.id);}},
-      {l:&quot;2 hermanos (c/u)&quot;, f:function(n){return precioPosicion(n,2,p.id);}},
-      {l:&quot;3 hermano&quot;, f:function(n){return precioPosicion(n,3,p.id);}},
-      {l:&quot;4 hermano&quot;, f:function(n){return precioPosicion(n,4,p.id);}},
-      {l:&quot;1/2 beca&quot;, f:function(n){return precioMediaBeca(n,p.id);}}
-    ];
+  {l:"1 alumno", f:function(n){return precioPosicion(n,1,p.id,1);}},
+  {l:"2 hermanos (c/u)", f:function(n){return precioPosicion(n,2,p.id,2);}},
+  {l:"3° hermano", f:function(n){return precioPosicion(n,3,p.id,3);}},
+  {l:"4° hermano", f:function(n){return precioPosicion(n,4,p.id,4);}},
+  {l:"1/2 beca", f:function(n){return precioMediaBeca(n,p.id);}}
+];
     filas.forEach(function(fi,idx){
       h+='<tr'+(idx%2?' class=&quot;alt&quot;':'')+'><td class=&quot;l&quot;>'+fi.l+'</td>';
       niveles.forEach(function(n){ h+='<td>'+money(fi.f(n))+'</td>'; });
